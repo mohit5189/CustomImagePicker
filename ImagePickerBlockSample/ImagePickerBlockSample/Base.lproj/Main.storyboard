@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZW-cO-Ivq">
+                                <rect key="frame" x="112" y="109" width="151" height="30"/>
+                                <color key="backgroundColor" red="0.85882352939999995" green="0.85882352939999995" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="PmY-wJ-atp"/>
+                                    <constraint firstAttribute="width" constant="151" id="XyE-6k-M52"/>
+                                </constraints>
+                                <state key="normal" title="Image From Gallery"/>
+                                <connections>
+                                    <action selector="pickFromGallery:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HY6-ac-AAO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KeU-jp-3aa">
+                                <rect key="frame" x="112" y="165" width="151" height="30"/>
+                                <color key="backgroundColor" red="0.85882352939999995" green="0.85882352939999995" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ATJ-kh-gyW"/>
+                                    <constraint firstAttribute="width" constant="151" id="h9o-sd-feZ"/>
+                                </constraints>
+                                <state key="normal" title="Image From Camera"/>
+                                <connections>
+                                    <action selector="pickFromCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RHw-zI-f6j"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SFM-jy-kEU">
+                                <rect key="frame" x="51" y="233" width="273" height="202"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="273" id="mzQ-wf-raG"/>
+                                    <constraint firstAttribute="height" constant="202" id="u6t-cE-wyC"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KeU-jp-3aa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="79h-vx-FTH"/>
+                            <constraint firstItem="SFM-jy-kEU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O2v-Zl-ssa"/>
+                            <constraint firstItem="KeU-jp-3aa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vno-ud-Btr"/>
+                            <constraint firstItem="TZW-cO-Ivq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="89" id="Vx6-vE-znT"/>
+                            <constraint firstItem="TZW-cO-Ivq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cRA-1L-l33"/>
+                            <constraint firstItem="SFM-jy-kEU" firstAttribute="top" secondItem="KeU-jp-3aa" secondAttribute="bottom" constant="38" id="g5M-oP-nsI"/>
+                            <constraint firstItem="KeU-jp-3aa" firstAttribute="top" secondItem="TZW-cO-Ivq" secondAttribute="bottom" constant="26" id="zWg-sZ-bun"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="imageView" destination="SFM-jy-kEU" id="5g9-Cw-csk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="377.5" y="305.5"/>
+        </scene>
+    </scenes>
+</document>
